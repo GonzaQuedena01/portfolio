@@ -17,17 +17,6 @@
     grid-area: logo;
 }
 
-.nav__logo img {
-    width: 40px;
-    height: 40px;
-    display: block;
-}
-
-.nav__icon {
-    width: 30px;
-    display: block;
-}
-
 .nav__menu {
     grid-area: img;
     z-index: 10;
@@ -44,23 +33,26 @@
     transition: clip-path .5s;
 }
 
-.dropdown__list {
-    list-style: none;
+.toggle__slider:before {
+
+    position: absolute;
+    content: "";
+    border-radius: 50%;
+    background-color: white;
+
+    height: 26px;
+    width: 26px;
+
+    left: 4px;
+    bottom: 4px;
+
+    transition: .4s;
 }
 
-.dropdown__link {
-    display: flex;
-    gap: .6rem;
-    align-items: center;
-
-    padding: 1em .7em;
-    text-decoration: none;
-    color: rgb(184, 187, 191);
+input:checked + .toggle__slider {
+    background-color: #2196F3;
 }
 
-.dropdown__span {
-    color: #ffffff;
-    font-size: 1.2rem;
-    font-weight: 500;
-    letter-spacing: 0.1em;
+input:checked + .toggle__slider:before {
+    transform: translateX(26px);
 }
