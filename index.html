@@ -11,85 +11,83 @@
     <body>
         <header class="w-full">
             <nav class="nav bg-secondary p-4">
-                <div class="nav__container w-[90%] mx-auto h-[70px] grid grid-cols-[1fr_auto]
+                <div class="nav__container w-[90%] mx-auto h-[70px] grid grid-cols-2 md:grid-cols-3
                     justify-between items-center px-4 overflow-hidden">
 
                     <!--logo section-->
-                    <span class="text-2xl tracking-widest font-bold text-white">
+                    <span class="col-span-1">
                       <img src="assets/images/logo.png" alt="logo" class="size-12 block"/>
                     </span>
 
                     <!--desktop menu-->
-                    <ul class="hidden md:flex gap-6 items-center w-full">
-                        <li class="list-none">
-                            <a href="#" class="flex gap-[0.6rem] items-center py-4 px-3 no-underline text-white">
-                                <span class="text-white text-[1.2rem] tracking-widest font-medium hover:underline">
+                    <div class="hidden md:flex md:col-span-2">
+                        <ul class="md:flex gap-8 items-center w-full lg:justify-end">
+                            <li class="list-none">
+                                <a href="#" class="flex text-[1.2rem] items-center py-4 no-underline
+                                    text-white tracking-widest font-medium hover:underline">
                                     ABOUT ME
-                                </span>
-                            </a>
-                        </li>
+                                </a>
+                            </li>
 
-                        <li class="list-none">
-                            <a href="#" class="flex gap-[0.6rem] items-center py-4 px-3 no-underline text-white">
-                                <span class="text-white text-[1.2rem] tracking-widest font-medium hover:underline">
+                            <li class="list-none">
+                                <a href="#" class="flex text-[1.2rem] items-center py-4 no-underline
+                                    text-white tracking-widest font-medium hover:underline">
                                     CONTACT
-                                </span>
-                            </a>
-                        </li>
+                                </a>
+                            </li>
+                        </ul>
 
-                        <li class="list-none toggle ml-4">
-                            <div class="toggle__container flex items-center gap-2">
-                                <label class="inline-block relative w-[60px] h-[34px] mr-2">
-                                    <input class="opacity-0 w-0 h-0" type="checkbox" id="language-toggle-main">
-                                    <span class="toggle__slider rounded-full absolute inset-0 cursor-pointer
-                                        bg-gray-300 transition duration-400"></span>
-                                </label>
+                        <div class="hidden md:flex items-center gap-2 ml-10">
+                            <label class="relative inline-block w-[60px] h-[34px] mr-2">
+                                <input class="opacity-0 w-0 h-0" type="checkbox" id="language-toggle-main">
+                                    <span class="toggle__slider bg-gray-300 rounded-full block absolute inset-0 cursor-pointer
+                                         transition duration-400"></span>
+                            </label>
 
-                                <span class="dropdown__span text-white text-[1.2rem]
+                            <span class="dropdown__span text-white text-[1.2rem]
                                     tracking-widest font-medium mb-1">
                                     ES
-                                </span>
-                            </div>
-                        </li>
-                    </ul>
+                            </span>
+                        </div>
+                    </div>
 
                     <!--mobile menu icons-->
-                    <a href="#menu" class="nav__menu md:hidden">
-                        <img src="/assets/images/svg/menu.svg" class="w-8 block" alt="menu-icon"/>
-                    </a>
-                    <a href="#" class="nav__menu nav__menu--second md:hidden">
-                        <img src="/assets/images/svg/close.svg" class="w-8 block" alt="close-icon"/>
-                    </a>
+                    <div class="col-span-1 flex justify-end items-center -space-x-8 md:hidden">
+                        <a href="#menu" class="nav__menu z-10">
+                            <img src="/assets/images/svg/menu.svg" class="w-8 block" alt="menu-icon"/>
+                        </a>
+                        <a href="#" class="nav__menu nav__menu--second z-10">
+                            <img src="/assets/images/svg/close.svg" class="w-8 block" alt="close-icon"/>
+                        </a>
+                    </div>
 
                     <!--mobile menu-->
                     <ul class="dropdown bg-secondary absolute right-0 top-0 bottom-0 w-[65%] max-w-[300px]
                         p-4 flex flex-col gap-6 justify-center" id="menu">
 
                         <li class="list-none">
-                            <a href="#" class="flex gap-[0.6rem] items-center py-4 px-3 no-underline text-white">
-                                <span class="text-white text-[1.2rem] tracking-widest font-medium hover:underline">
-                                    ABOUT ME
-                                </span>
+                            <a href="#" class="flex text-[1.2rem] items-center py-4 no-underline
+                                    text-white tracking-widest font-medium hover:underline ml-3">
+                                ABOUT ME
                             </a>
                         </li>
 
                         <li class="list-none">
-                            <a href="#" class="flex gap-[0.6rem] items-center py-4 px-3 no-underline text-white">
-                                <span class="text-white text-[1.2rem] tracking-widest font-medium hover:underline">
-                                    CONTACT
-                                </span>
+                            <a href="#" class="flex text-[1.2rem] items-center py-4 no-underline
+                                    text-white tracking-widest font-medium hover:underline ml-3">
+                                CONTACT
                             </a>
                         </li>
 
                         <li class="list-none toggle ml-3">
-                            <div class="toggle__container flex items-center gap-2">
-                                <label class="inline-block relative w-[60px] h-[34px] mr-2">
+                            <div class="flex items-center gap-2">
+                                <label class="relative inline-block w-[60px] h-[34px] mr-2">
                                     <input class="opacity-0 w-0 h-0" type="checkbox" id="language-toggle-menu">
                                     <span class="toggle__slider rounded-full absolute inset-0 cursor-pointer
                                         bg-gray-300 transition duration-400"></span>
                                 </label>
 
-                                <span class="dropdown__span text-white text-[1.2rem]
+                                <span class="text-white text-[1.2rem]
                                     tracking-widest font-medium mb-1">
                                     ES
                                 </span>
