@@ -1,0 +1,66 @@
+.nav {
+    --img1: scale(1);
+    --img2: scale(0);
+}
+
+.nav:has( .dropdown:target ) {
+    --img1: scale(0);
+    --img2: scale(1);
+    --clip: inset(0 0 0 0);
+}
+
+.nav__container {
+    grid-template-areas: "logo img";
+}
+
+.nav__logo {
+    grid-area: logo;
+}
+
+.nav__logo img {
+    width: 40px;
+    height: 40px;
+    display: block;
+}
+
+.nav__icon {
+    width: 30px;
+    display: block;
+}
+
+.nav__menu {
+    grid-area: img;
+    z-index: 10;
+    transition: all .3s;
+    transform: var(--img1);
+}
+
+.nav__menu--second {
+    transform: var(--img2);
+}
+
+.dropdown {
+    clip-path: var(--clip, inset(0 0 0 100%));
+    transition: clip-path .5s;
+}
+
+.dropdown__list {
+    list-style: none;
+}
+
+.dropdown__link {
+    display: flex;
+    gap: .6rem;
+    align-items: center;
+
+    padding: 1em .7em;
+    text-decoration: none;
+    color: rgb(184, 187, 191);
+}
+
+.dropdown__span {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}

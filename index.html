@@ -5,13 +5,58 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>My Portfolio</title>
         <link rel="stylesheet" href="assets/styles/main.css">
+        <link rel="stylesheet" href="assets/styles/styles.css">
     </head>
 
     <body>
-        <header class="w-full h-20 bg-linear-green">
+        <nav class="nav bg-secondary p-4">
+            <div class="nav__container w-[90%] mx-auto h-[70px] grid grid-cols-[max-content_max-content]
+          justify-between items-center overflow-hidden">
 
-        </header>
+          <span class="nav__logo text-2xl tracking-widest font-bold text-white">
+            <img src="assets/images/logo.png" alt="logo"/>
+          </span>
 
+                <ul class="dropdown__main hidden md:flex gap-6">
+                    <li class="dropdown__list">
+                        <a href="#" class="dropdown__link">
+                            <span class="dropdown__span">ABOUT ME</span>
+                        </a>
+                    </li>
+
+                    <li class="dropdown__list">
+                        <a href="#" class="dropdown__link">
+                            <span class="dropdown__span">CONTACT</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <a href="#menu" class="nav__menu md:hidden">
+                    <img src="/assets/images/svg/menu.svg" class="nav__icon" alt="menu-icon"/>
+                </a>
+
+                <a href="#" class="nav__menu nav__menu--second md:hidden">
+                    <img src="/assets/images/svg/close.svg" class="nav__icon" alt="close-icon"/>
+                </a>
+
+                <ul class="dropdown bg-secondary absolute right-0 top-0 bottom-0 w-[60%] max-w-[300px]
+            p-4 flex flex-col gap-6 justify-center" id="menu">
+
+                    <li class="dropdown__list">
+                        <a href="#" class="dropdown__link">
+                            <span class="dropdown__span">ABOUT ME</span>
+                        </a>
+                    </li>
+
+                    <li class="dropdown__list">
+                        <a href="#" class="dropdown__link">
+                            <span class="dropdown__span">CONTACT</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
         <script src="js/scripts.js"></script>
     </body>
 </html>
