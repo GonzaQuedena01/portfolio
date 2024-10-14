@@ -17,6 +17,11 @@ module.exports = {
         'linear-red': 'linear-gradient(to left, #DDD8D5 0%, #F05F47 50%)',
         'linear-green': 'linear-gradient(to right, #51B8AC 0%, #75C842 100%)',
       }),
+      fontFamily: {
+        'jacques': ['"Jacques Francois"', 'sans-serif'],
+        'league': ['"League Spartan"', 'sans-serif'],
+        'libre': ['"Libre Baskerville"', 'serif'],
+      }
     },
   },
   plugins: [],
