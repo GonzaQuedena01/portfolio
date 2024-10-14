@@ -56,3 +56,69 @@ input:checked + .toggle__slider {
 input:checked + .toggle__slider:before {
     transform: translateX(26px);
 }
+
+.t-h1 {
+   font-size: clamp(2.25rem, 4vw + 1rem, 3rem);
+}
+
+/* Agrega esto en tu archivo CSS */
+
+/*.hero,
+.about-me {
+    min-height: 100vh; !* Cada sección ocupa toda la altura de la ventana *!
+    display: flex; !* Alinea los elementos verticalmente *!
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+!* También puedes ajustar el espacio interno (padding) según sea necesario *!
+
+
+.about-me {
+    padding: 16px; !* Ajusta según tus necesidades *!
+}
+*/
+
+
+/*html, body {
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+body, main {
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+}
+
+
+
+header {
+    scroll-snap-align: start;
+}
+
+#about-me {
+    background-color: #75C842;
+}*/
+
+/*
+section {
+    height: 100vh;
+    scroll-snap-align: start;
+}*/
+
+/*
+section {
+    height: 100vh;
+}*/
+
+/*
+body, main {
+    scroll-snap-type: y mandatory;
+}
+
+section {
+    scroll-snap-align: start;
+}*/
