@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="assets/styles/styles.css">
     </head>
 
-    <body>
+    <body class="h-screen bg-primary">
         <header class="w-full">
             <nav class="nav bg-secondary p-4">
                 <div class="nav__container w-[90%] mx-auto h-[70px] grid grid-cols-2 md:grid-cols-3
@@ -23,7 +23,7 @@
                     <div class="hidden md:flex md:col-span-2">
                         <ul class="md:flex gap-8 items-center w-full lg:justify-end">
                             <li class="list-none">
-                                <a href="#" class="flex text-[1.2rem] items-center py-4 no-underline
+                                <a href="#about-me" class="flex text-[1.2rem] items-center py-4 no-underline
                                     text-white tracking-widest font-medium hover:underline">
                                     ABOUT ME
                                 </a>
@@ -46,7 +46,7 @@
 
                             <span class="dropdown__span text-white text-[1.2rem]
                                     tracking-widest font-medium mb-1">
-                                    ES
+                                    EN
                             </span>
                         </div>
                     </div>
@@ -89,7 +89,7 @@
 
                                 <span class="text-white text-[1.2rem]
                                     tracking-widest font-medium mb-1">
-                                    ES
+                                    EN
                                 </span>
                             </div>
                         </li>
@@ -97,6 +97,137 @@
                 </div>
             </nav>
         </header>
+
+        <main class="w-full px-4 sm:px-6 font-jacques lg:px-32">
+            <div class="xl:w-[90%] mx-auto">
+                <section class="hero md:w-[90%] mx-auto h-screen">
+                    <div class="container flex flex-col gap-12 h-full justify-center items-center lg:flex-row-reverse -mt-10">
+                        <!--profile photo-->
+                        <div class="w-full lg:w-[40%] flex justify-center">
+                            <img src="assets/images/profile.jpg" alt="profile-photo-gonzalo-quedena"
+                                 class="w-[200px] h-[200px] sm:w-[250px] sm:h-[250px] md:w-[300px] md:h-[300px]
+                            lg:w-[350px] lg:h-[350px] rounded-full object-cover"/>
+                        </div>
+
+                        <!--profile info-->
+                        <div class="text-center flex flex-col gap-5 md:gap-6 items-center lg:items-start lg:w-[60%]">
+                            <h1 class="text-white text-4xl t-h1">Gonzalo Quedena</h1>
+                            <p class="text-white font-libre text-base lg:text-xl">On the way to becoming a web developer</p>
+                            <a href="#" class="bg-linear-red w-[80%] lg:max-w-[200px] h-14 rounded text-white text-[1.6rem] tracking-widest
+                            transition-transform duration-300 hover:-translate-y-2 font-league flex items-center justify-center">
+                                View Works
+                            </a>
+
+                            <!--social media icons-->
+                            <div class="flex flex-row justify-center gap-8 items-center w-[80%] lg:max-w-[200px]">
+                                <a href="https://github.com/GonzaQuedena01" target="_blank" class="w-9 sm:w-10 block" aria-label="GitHub">
+                                    <img src="assets/images/svg/github.svg" alt="github-icon" class="w-full block">
+                                </a>
+                                <button class="w-9 sm:w-10 block">
+                                    <img src="assets/images/svg/linkedin.svg" alt="linkedin-icon" class="w-full block">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="about-me" class="w-full px-4 sm:px-6 h-full py-8 lg:h-screen flex items-center">
+                    <div class="flex flex-col gap-8 lg:flex-row lg:gap-32">
+                        <div class="flex flex-col gap-20 text-white lg:w-[60%]">
+                            <div class="card bg-linear-grey p-5 rounded-2xl text-justify">
+                                <h2 class="card__title text-[1.6rem] font-bold">About Me.</h2>
+                                <p class="card__text font-libre">
+                                    Hello! I'm a frontend developer from Peru, focused on building digital solutions and learning
+                                    new technologies. My goal is to keep growing and contributing to impactful projects.
+                                </p>
+                            </div>
+
+                            <div class="card bg-linear-grey p-5 rounded-2xl text-justify">
+                                <h2 class="card__title text-[1.6rem] font-bold">Education</h2>
+                                <ul class="card__list pl-5 my-3">
+                                    <li class="list-disc font-libre">Software Engineering Student</li>
+                                </ul>
+                                <p class="card__text pl-5 text-black font-medium font-libre">
+                                    Peruvian University of Applied Sciences
+                                    2020 - Present
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="text-white lg:w-[40%]">
+                            <h2 class="card__title text-[1.6rem] font-bold">Tech Stack</h2>
+                            <div class="flex flex-col items-center lg:items-start gap-5 mt-6">
+                                <div class="flex flex-row gap-4 w-full items-center justify-center">
+                                    <!-- Botones Responsivos -->
+                                    <button class="bg-linear-red px-4 py-2 sm:px-6 rounded text-white
+                                        text-[0.875rem] sm:text-[1rem] tracking-widest transition-transform duration-300
+                                        hover:-translate-y-2 font-league lg:w-auto" id="languagesBtn">
+                                        Languages
+                                    </button>
+
+                                    <button class="bg-linear-red px-4  py-2 sm:px-6 rounded text-white
+                                        text-[0.875rem] sm:text-[1rem] tracking-widest transition-transform duration-300
+                                        hover:-translate-y-2 font-league lg:w-auto" id="frameworksBtn">
+                                        Frameworks
+                                    </button>
+                                </div>
+
+                                <div class="mt-4 w-full flex justify-center">
+                                    <ul class="grid grid-cols-3 gap-10 sm:grid-cols-4 lg:grid-cols-3 lg:gap-14" id="techStack">
+                                        <li data-category="language" class="flex justify-center">
+                                            <img src="https://static-00.iconduck.com/assets.00/html-5-icon-224x256-1b5ud2sy.png" alt="html-logo" class="max-w-[70px] w-full" />
+                                        </li>
+
+                                        <li data-category="language" class="flex justify-center">
+                                            <img src="https://static-00.iconduck.com/assets.00/css-3-icon-440x512-ro22zra3.png" alt="css-logo" class="max-w-[70px] w-full" />
+                                        </li>
+
+                                        <li data-category="language" class="flex justify-center">
+                                            <img src="https://static-00.iconduck.com/assets.00/javascript-js-icon-2048x2048-nyxvtvk0.png" alt="js-logo" class="max-w-[70px] w-full" />
+                                        </li>
+
+                                        <li data-category="language" class="flex justify-center">
+                                            <img src="https://static-00.iconduck.com/assets.00/typescript-icon-256x256-nuvyqkqx.png" alt="ts-logo" class="max-w-[70px] w-full" />
+                                        </li>
+
+                                        <li data-category="framework" class="flex justify-center">
+                                            <img src="https://static-00.iconduck.com/assets.00/dotnet-icon-256x256-ozvjws7o.png" alt="net-logo" class="max-w-[70px] w-full" />
+                                        </li>
+
+                                        <li data-category="framework" class="flex justify-center">
+                                            <img src="https://static-00.iconduck.com/assets.00/file-type-ng-smart-component-ts-icon-250x256-ilof0grb.png" alt="angular-ts-logo" class="max-w-[70px] w-full" />
+                                        </li>
+
+                                        <li data-category="framework" class="flex justify-center">
+                                            <img src="https://static-00.iconduck.com/assets.00/vue-icon-512x442-j09z7tua.png" alt="vue-logo" class="max-w-[70px] w-full" />
+                                        </li>
+
+                                        <li data-category="language" class="flex justify-center">
+                                            <img src="https://static-00.iconduck.com/assets.00/c-icon-1822x2048-y6utrv43.png" alt="c-plus-plus-logo" class="max-w-[70px] w-full" />
+                                        </li>
+
+                                        <li data-category="language" class="flex justify-center">
+                                            <img src="https://static-00.iconduck.com/assets.00/python-icon-2048x2048-lhgnpljc.png" alt="python-logo" class="max-w-[70px] w-full" />
+                                        </li>
+
+                                        <li data-category="framework" class="flex justify-center">
+                                            <img src="https://static-00.iconduck.com/assets.00/tailwind-css-icon-1024x615-fdeis5r1.png" alt="tailwind-logo" class="max-w-[70px] w-full" />
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+
+
+                <section class="h-screen">
+
+                </section>
+            </div>
+        </main>
 
         <script src="js/scripts.js"></script>
     </body>
