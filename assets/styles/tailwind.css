@@ -62,6 +62,7 @@ body {
 }
 
 .dropdown {
+    @apply px-10 lg:hidden;
     clip-path: var(--clip, inset(0 0 0 100%));
     transition: clip-path var(--transition-duration);
 }
@@ -95,7 +96,7 @@ input:checked + .toggle__slider:before {
 }
 
 .main {
-    @apply lg:scroll-snap-y overflow-y-scroll scroll-smooth h-screen w-full px-4 sm:px-6 font-jacques lg:px-32;
+    @apply lg:scroll-snap-y lg:overflow-y-scroll scroll-smooth h-screen w-full px-4 sm:px-6 font-jacques lg:px-32;
 }
 
 .section {
