@@ -10,5 +10,123 @@
     :root {
         --color-primary: 15, 15, 15;
         --color-secondary: #1F1F1F;
+
+        --white: #fff;
+        --slider-size: 26px;
+        --transition-duration: 0.6s;
     }
+}
+
+@layer utilities {
+    .scroll-snap-y {
+        scroll-snap-type: y mandatory;
+    }
+
+    .scroll-snap-start {
+        scroll-snap-align: start;
+    }
+}
+
+body {
+    @apply lg:overflow-hidden;
+}
+
+.nav {
+    --img1: scale(1);
+    --img2: scale(0);
+}
+
+.nav:has( .dropdown:target ) {
+    --img1: scale(0);
+    --img2: scale(1);
+    --clip: inset(0 0 0 0);
+}
+
+.nav__container {
+    grid-template-areas: "logo img";
+}
+
+.nav__logo {
+    grid-area: logo;
+}
+
+.nav__menu {
+    grid-area: img;
+    z-index: 10;
+    transition: all var(--transition-duration);
+    transform: var(--img1);
+}
+
+.nav__menu--second {
+    transform: var(--img2);
+}
+
+.dropdown {
+    clip-path: var(--clip, inset(0 0 0 100%));
+    transition: clip-path var(--transition-duration);
+}
+
+.toggle__slider:before {
+
+    position: absolute;
+    content: "";
+    border-radius: 50%;
+    background-color: var(--white);
+
+    height: var(--slider-size);
+    width: var(--slider-size);
+
+    left: 4px;
+    bottom: 4px;
+
+    transition: var(--transition-duration);
+}
+
+input:checked + .toggle__slider {
+    background-color: #2196F3;
+}
+
+input:checked + .toggle__slider:before {
+    transform: translateX(26px);
+}
+
+.t-h1 {
+    font-size: clamp(2.25rem, 4vw + 1rem, 3rem);
+}
+
+.main {
+    @apply lg:scroll-snap-y overflow-y-scroll scroll-smooth h-screen w-full px-4 sm:px-6 font-jacques lg:px-32;
+}
+
+.section {
+   @apply w-full p-4 sm:px-6 md:h-screen flex items-center justify-center scroll-snap-start;
+}
+
+.section:nth-child(1) {
+    @apply h-screen
+}
+
+.icon {
+    @apply w-9 sm:w-10 block
+}
+
+.button {
+    @apply font-league bg-linear-red text-white rounded tracking-widest hover:-translate-y-2
+    flex items-center justify-center transition-transform duration-300 ;
+}
+
+.about-me__container {
+    @apply flex flex-col gap-12 lg:flex-row lg:gap-32;
+}
+
+.about-me__title {
+    @apply text-[1.6rem] font-bold;
+}
+
+.about-me__stack {
+    @apply flex flex-wrap justify-center gap-10 lg:gap-14;
+}
+
+.stack__tech {
+    @apply max-w-[60px] w-full;
 }
